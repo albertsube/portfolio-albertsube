@@ -3,8 +3,8 @@
     class="flex justify-center sm:justify-between items-center p-5 w-[1120px]"
   >
     <img
-      class="hidden sm:block rounded-full w-12 h-12"
-      src="https://media.licdn.com/dms/image/C4E03AQEMrSffNRF_eA/profile-displayphoto-shrink_400_400/0/1517449154303?e=2147483647&v=beta&t=pupmGrb2LPrPvkcYhpVqrTNCRfIYaxVU48mKjVEgaRo"
+      class="hidden sm:block rounded-full w-24 h-24 object-cover shrink-animate"
+      src="/albertusbe-thumbnail.webp"
       alt="albertsube photo"
     />
 
@@ -29,6 +29,19 @@
   @keyframes blur-animation {
     to {
       backdrop-filter: blur(6px);
+    }
+  }
+
+  .shrink-animate {
+    animation: shrink-animation linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0 400px;
+  }
+
+  @keyframes shrink-animation {
+    to {
+      width: 3rem;
+      height: 3rem;
     }
   }
 </style>
