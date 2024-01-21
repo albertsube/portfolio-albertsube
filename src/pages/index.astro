@@ -8,6 +8,8 @@ import SocialPill from "../components/SocialPill.astro"
 import Experience from "../components/Experience.astro"
 import SectionContainer from "../components/SectionContainer.astro"
 import Briefcase from "../components/icons/Briefcase.astro"
+import Code from "../components/icons/Code.astro"
+import Projects from "../components/Projects.astro"
 ---
 
 <Layout
@@ -17,8 +19,9 @@ import Briefcase from "../components/icons/Briefcase.astro"
   <main>
     <SectionContainer class="md:pt-20">
       <h1
-        class="text-white text-3xl md:text-5xl font-bold
-        flex justify-center items-center gap-x-4 pb-10"
+        class="text-white text-4xl md:text-5xl font-bold
+        flex justify-center items-center gap-4 pb-10
+        flex-col md:flex-row"
       >
         Hey, I'm albertsube
         <a
@@ -36,7 +39,7 @@ import Briefcase from "../components/icons/Briefcase.astro"
         projects with highly demanding customers.
       </h2>
 
-      <nav class="flex flex-col md:flex-row gap-4 mt-8">
+      <nav class="flex flex-wrap gap-4 mt-8">
         <SocialPill href="https://www.linkedin.com/in/albertsube/">
           <LinkedInIcon class="size-6" />
           LinkedIn
@@ -53,11 +56,19 @@ import Briefcase from "../components/icons/Briefcase.astro"
     </SectionContainer>
 
     <SectionContainer id="experience">
-      <h2 class="flex gap-3 items-center text-2xl font-semibold mb-4">
+      <h2 class="flex gap-3 items-center text-3xl font-semibold mb-4">
         <Briefcase class="size-8" />
         Work Experience
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="projects">
+      <h2 class="flex gap-3 items-center text-3xl font-semibold mb-4">
+        <Code class="size-8" />
+        Projects
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
