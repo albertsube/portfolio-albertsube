@@ -3,6 +3,9 @@ import GitHub from "./icons/GitHub.astro"
 import Web from "./icons/Web.astro"
 import React from "./icons/React.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import CSS from "./icons/CSS.astro"
+import Node from "./icons/Node.astro"
+import Express from "./icons/Express.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
@@ -16,33 +19,55 @@ const TAGS = {
     class: "bg-white text-[#38BDF8]",
     icon: Tailwind,
   },
+  CSS_MODULES: {
+    name: "CSS Modules",
+    class: "bg-white text-[#0c73b8]",
+    icon: CSS,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-white text-[#0c73b8]",
+    icon: CSS,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-gray-900 text-[#539e43]",
+    icon: Node,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-white text-black",
+    icon: Express,
+  },
 }
 
 const PROJECTS = [
   {
-    title: "Minesweeper",
+    title: "Health App",
     description:
-      "A web version of the classical game of minesweeper, made using recursive programming. It includes a settings pannel where you can configure the size of the board and the number of mines.",
-    link: "#",
-    github: "https://github.com/albertsube/minesweeper",
-    image: "/projects/minesweeper.webp",
-    tags: [TAGS.REACT, TAGS.TAILWIND],
+      "A social network devolped around sharing healthy recipes with the world. Create your favorite recipes so all your friends can see them, or use it as your personal recipe book. Explore the most trending foods from all over the world and follow your favorite cookers. Perphaps you can be the next famous cooker to follow!",
+    github: "https://github.com/FSDSTR1023/rojo-frontend",
+    link: "https://github.com/FSDSTR1023/rojo-backend",
+    image: "/projects/healthapp.webp",
+    tags: [TAGS.REACT, TAGS.CSS_MODULES, TAGS.NODE, TAGS.EXPRESS],
   },
   {
     title: "Minesweeper",
     description:
       "A web version of the classical game of minesweeper, made using recursive programming. It includes a settings pannel where you can configure the size of the board and the number of mines.",
     github: "https://github.com/albertsube/minesweeper",
+    link: null,
     image: "/projects/minesweeper.webp",
     tags: [TAGS.REACT, TAGS.TAILWIND],
   },
   {
-    title: "Minesweeper",
+    title: "Poke API",
     description:
-      "A web version of the classical game of minesweeper, made using recursive programming. It includes a settings pannel where you can configure the size of the board and the number of mines.",
-    link: "#",
-    image: "/projects/minesweeper.webp",
-    tags: [TAGS.REACT, TAGS.TAILWIND],
+      "Front-end application based on the Pokemon API where you can explore all Pokemons and its evolutions. Full interactivity that allows navigation from one pokemon to the ones that best match against it, know all pokemon from a given type, see all the evolutions. See all the pokemons with an infinite scrolling featured with type filtering capabilities.",
+    github: "https://github.com/albertsube/pokemon-react",
+    link: null,
+    image: "/projects/pokeapi.webp",
+    tags: [TAGS.REACT, TAGS.CSS],
   },
 ]
 ---
