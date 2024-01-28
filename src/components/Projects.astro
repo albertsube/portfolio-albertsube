@@ -1,6 +1,9 @@
 ---
+import GitHub from "./icons/GitHub.astro"
+import Web from "./icons/Web.astro"
 import React from "./icons/React.astro"
 import Tailwind from "./icons/Tailwind.astro"
+import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
   REACT: {
@@ -25,31 +28,63 @@ const PROJECTS = [
     image: "/projects/minesweeper.webp",
     tags: [TAGS.REACT, TAGS.TAILWIND],
   },
+  {
+    title: "Minesweeper",
+    description:
+      "A web version of the classical game of minesweeper, made using recursive programming. It includes a settings pannel where you can configure the size of the board and the number of mines.",
+    github: "https://github.com/albertsube/minesweeper",
+    image: "/projects/minesweeper.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
+    title: "Minesweeper",
+    description:
+      "A web version of the classical game of minesweeper, made using recursive programming. It includes a settings pannel where you can configure the size of the board and the number of mines.",
+    link: "#",
+    image: "/projects/minesweeper.webp",
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
 ]
 ---
 
-{
-  PROJECTS.map(({ title, description, link, github, image, tags }) => (
-    <article>
-      <h3 class="text-2xl font-semibold text-blue-400 mb-4">{title}</h3>
-      <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul class="flex flex-wrap gap-4">
-        {tags.map((tag) => (
-          <li>
-            <span
-              class={`flex gap-x-2 rounded-full text-xs px-4 py-2 ${tag.class}`}
-            >
-              <tag.icon class="size-4" />
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        class="rounded shadow-xl shadow-white/10 my-8"
-        src={image}
-        alt={`Screenshot of the project ${title}`}
-      />
-    </article>
-  ))
-}
+<section class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ title, description, link, github, image, tags }) => (
+      <article>
+        <h3 class="text-2xl font-semibold text-blue-400 mb-4">{title}</h3>
+        <p class="text-lg mb-4 text-pretty">{description}</p>
+        <ul class="flex flex-wrap gap-4">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-full text-xs px-4 py-2 ${tag.class}`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <img
+          class="rounded shadow-xl shadow-white/10 my-8"
+          src={image}
+          alt={`Screenshot of the project ${title}`}
+        />
+        <footer class="flex gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              See source code
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Web class="size-6" />
+              Go to web site
+            </LinkButton>
+          )}
+        </footer>
+      </article>
+    ))
+  }
+</section>
