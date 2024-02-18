@@ -1,0 +1,35 @@
+---
+import ExperienceIcon from "./ExperienceItem.astro"
+
+const EDUCATION = [
+  {
+    title: "Master in Full-Stack Developement - Nuclio Digital School",
+    description:
+      "Developement of Full-Stack web application using the following technologies: ReactJS, NodeJS, ExpressJS, MongoDB, Mongoose, TailwindCSS.",
+    date: "October 2023 - March 2024",
+  },
+  {
+    title:
+      "Double Master Degree in Industrial Engineering and Automatics and Robotics - UPC",
+    description:
+      "Average grade: 8.0/10. Honors: Pattern Recognition and Machine Learning.",
+    date: "September 2015 - October 2018",
+  },
+  {
+    title: "Bachelor Degree in Industrial Engineering - UPC",
+    description:
+      "Average grade: 8.25/10. Honors: Linear Algebra, Calculus I, Chemistry II, Informatics, Economy and Business, Statistics, Statistical techniques for quality, Organization and Management, Optimization and Simulation.",
+    date: "September 2011 - June 2015",
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EDUCATION.map((education) => (
+      <li class="mb-10 ms-4">
+        <ExperienceIcon {...education} />
+      </li>
+    ))
+  }
+</ol>
