@@ -6,6 +6,7 @@ import Tailwind from "./icons/Tailwind.astro"
 import CSS from "./icons/CSS.astro"
 import Node from "./icons/Node.astro"
 import Express from "./icons/Express.astro"
+import MongoDB from "./icons/MongoDB.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
@@ -39,6 +40,11 @@ const TAGS = {
     class: "bg-white text-black",
     icon: Express,
   },
+  MONGODB: {
+    name: "Mongo DB",
+    class: "bg-slate-800 text-[#01ec64]",
+    icon: MongoDB,
+  },
 }
 
 const PROJECTS = [
@@ -50,7 +56,7 @@ const PROJECTS = [
     backend: "https://github.com/FSDSTR1023/rojo-backend",
     link: "https://health-app-nuclio.netlify.app/",
     image: "/projects/healthapp.webp",
-    tags: [TAGS.REACT, TAGS.CSS_MODULES, TAGS.NODE, TAGS.EXPRESS],
+    tags: [TAGS.REACT, TAGS.CSS_MODULES, TAGS.NODE, TAGS.EXPRESS, TAGS.MONGODB],
   },
   {
     title: "Minesweeper",
