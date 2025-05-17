@@ -1,13 +1,13 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import Web from "./icons/Web.astro"
-import React from "./icons/React.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import CSS from "./icons/CSS.astro"
-import Node from "./icons/Node.astro"
-import Express from "./icons/Express.astro"
-import MongoDB from "./icons/MongoDB.astro"
-import LinkButton from "./LinkButton.astro"
+import GitHub from "./icons/GitHub.astro";
+import Web from "./icons/Web.astro";
+import React from "./icons/React.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import CSS from "./icons/CSS.astro";
+import Node from "./icons/Node.astro";
+import Express from "./icons/Express.astro";
+import MongoDB from "./icons/MongoDB.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
   REACT: {
@@ -45,7 +45,7 @@ const TAGS = {
     class: "bg-slate-800 text-[#01ec64]",
     icon: MongoDB,
   },
-}
+};
 
 const PROJECTS = [
   {
@@ -76,7 +76,7 @@ const PROJECTS = [
     image: "/projects/pokeapi.webp",
     tags: [TAGS.REACT, TAGS.CSS],
   },
-]
+];
 ---
 
 <section class="flex flex-col gap-y-16">
@@ -112,7 +112,7 @@ const PROJECTS = [
             src={image}
             alt={`Screenshot of the project ${title}`}
           />
-          <footer class="flex gap-x-4">
+          <footer class="flex flex-wrap gap-4">
             {github && (
               <LinkButton href={github}>
                 <GitHub class="size-6" />

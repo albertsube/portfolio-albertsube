@@ -1,27 +1,33 @@
 ---
-import ExperienceIcon from "./ExperienceItem.astro"
+import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCE = [
   {
+    title: "Full Stack Engineer - Nimbel Code",
+    description:
+      "Currently, I work as a Full Stack Developer at Nimbel Code, where I lead the development of web and mobile applications for fast-growing startups. One of the key projects I’ve contributed to is Famba, a telemedicine platform. I developed a mobile application using React and Capacitor for patient interaction, along with a React-based web platform for doctors. This application includes real-time chat functionality between patients and doctors using Firebase Firestore, and implements secure user authentication with Firebase Auth. The doctor's platform features a role-based authorization system, ensuring that access to specific features is granted based on user permissions. I also led the integration of Stripe payments, using Firebase Cloud Functions to manage secure, serverless backend logic. Another major project is NewsUp, a platform for journalists that includes both a custom CMS and a modular news website. The CMS, built with React, allows editorial teams to create and manage articles, configure layout components, and customize the site's appearance. It also integrates AI-powered tools through Google Gemini to assist in content generation and enhancement. The public-facing news site was developed using Astro, leveraging SSR, SSG, and ISR to deliver fast, dynamic content. The backend services were implemented using NestJS, TypeORM, and PostgreSQL, providing a robust infrastructure for content delivery and user management.",
+    date: "May 2024 - Present",
+  },
+  {
     title: "Automation Team Leader - Dara Pharmaceutical Equipment",
     description:
-      "Supervision from the initial phases of the project: mechanical design conceptualization and validation from an automation point of view and software architecture design. Leadership of automation projects for international clients: review of URS, technical overview during design phase, contact with suppliers, integration with customer systems, commissioning of projects “on-site”. Organization of the team’s activities and planning using Scrum methodology: product backlog, sprint planning and backlog, daily scrum meetings, sprint review. Technical leadership for the team members: smoothing the learning curve of new members, helping develop new skills for the team, unblocking problems to ensure meeting project schedule.",
-    date: "January 2021 - Now",
+      "Led the development of complex automation systems for pharmaceutical equipment, overseeing full project lifecycles from technical requirements to deployment. Managed cross-functional teams of up to 6 engineers, coordinating efforts across software, hardware, and validation teams to ensure delivery of projects valued over $15M. Defined and implemented software architecture and reusable logic, driving scalability and consistency across projects. Acted as the primary technical point of contact for international clients, ensuring alignment between requirements and system capabilities. Introduced agile methodologies (Scrum) for planning, tracking progress, and improving collaboration across development teams. Provided mentorship and support to junior engineers, promoting knowledge sharing and skill development.",
+    date: "January 2021 - May 2024",
   },
   {
     title: "Automation Engineer - Dara Pharmaceutical Equipment",
     description:
-      "Programming and commissioning of PLC code for washing, sterilization, filling and closing machinery. Working with different formats of vials, cartridge, syringes and bags of solid, semi-solid and powder product on sterile conditions. Creation of HMI applications with a user-first approach working with different platforms (FactoryTalk ME/SE, Wonderware, zenon). Development of standard and reusable applications following a modular architecture, maintenance of current standard code and continuous improvement of the code to solve scalability and compatibility issues.",
+      "Designed and implemented logic-driven systems to automate pharmaceutical machinery, delivering high reliability and precision in regulated environments. Collaborated with multidisciplinary teams to review technical specifications, coordinate system integration, and validate performance. Built modular, maintainable logic frameworks to improve reusability and reduce development time across projects. Developed user-oriented interfaces to support operators and ensure safety, compliance, and usability. Contributed to internal process improvements, standardizing software approaches for long-term scalability.",
     date: "April 2017 - December 2020",
   },
-]
+];
 ---
 
 <ol class="relative border-s border-gray-200 ml-3">
   {
     EXPERIENCE.map((experience) => (
       <li class="mb-10 ms-4">
-        <ExperienceIcon {...experience} />
+        <ExperienceItem {...experience} />
       </li>
     ))
   }
